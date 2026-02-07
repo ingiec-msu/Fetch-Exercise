@@ -2,16 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>4.5 Lab – External Data</title>
-
- 
+  <title>Rick and Morty Character Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>  
+<body class="bg-gradient-to-br from-purple-900 via-purple-700 to-indigo-900 min-h-screen flex items-center justify-center p-4">  
 
-  <main>
+  <main x-data="characterApp()" x-init="init()" class="bg-white rounded-lg shadow-2xl max-w-md w-full p-8">
+    <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">Rick and Morty Character Generator</h1>
+    
+    <button @click="getNextCharacter()" :disabled="loading" class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 disabled:from-gray-400 disabled:to-gray-400 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105 disabled:scale-100 mb-6">
+      <span x-show="!loading">Get Next Character</span>
+      <span x-show="loading">Loading...</span>
+    </button>
 
+    <div id="character-info"></div>
   </main>
 
+  <script src="RickMortyAPI.js"></script>
 </body>
 </html>

@@ -1,0 +1,54 @@
+/* Custom styles for Rick and Morty Character Generator */
+
+.character {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.character-image {
+  width: 100%;
+  height: 256px;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.character-details {
+  text-align: left;
+  width: 100%;
+}
+
+.character-details h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  animation: fadeIn 0.5s ease-in-out 0.1s both;
+}
+
+.character-details p {
+  color: #374151;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  animation: fadeIn 0.5s ease-in-out 0.2s both;
+}
+
+.character-details strong {
+  color: #9333ea;
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
