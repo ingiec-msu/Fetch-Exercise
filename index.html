@@ -9,9 +9,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-gradient-to-br from-purple-900 via-purple-700 to-indigo-900 min-h-screen flex items-center justify-center p-4">  
+<body class="bg-gradient-to-br from-purple-900 via-purple-700 to-indigo-900 min-h-screen flex flex-col p-4">
+  
+  <nav class="bg-purple-950 text-white p-4 rounded-lg mb-8 shadow-lg">
+    <div class="max-w-4xl mx-auto flex gap-6 justify-center">
+      <a href="index.html" class="font-bold text-lg hover:text-purple-300 transition duration-300">Generator</a>
+      <span class="text-purple-400">|</span>
+      <a href="debrief.html" class="font-bold text-lg hover:text-purple-300 transition duration-300">Debrief</a>
+    </div>
+  </nav>
 
-  <main x-data="characterApp()" x-init="init()" class="bg-white rounded-lg shadow-2xl max-w-md w-full p-8">
+  <main x-data="characterApp()" x-init="init()" class="bg-white rounded-lg shadow-2xl max-w-md w-full p-8 mx-auto">
     <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">Rick and Morty Character Generator</h1>
     
     <button @click="getNextCharacter()" :disabled="loading" class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 disabled:from-gray-400 disabled:to-gray-400 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105 disabled:scale-100 mb-6">

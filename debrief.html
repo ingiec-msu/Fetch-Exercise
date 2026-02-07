@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>4.5 Lab – External Data</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gradient-to-br from-purple-900 via-purple-700 to-indigo-900 min-h-screen flex flex-col p-4">  
+
+  <nav class="bg-purple-950 text-white p-4 rounded-lg mb-8 shadow-lg">
+    <div class="max-w-4xl mx-auto flex gap-6 justify-center">
+      <a href="index.html" class="font-bold text-lg hover:text-purple-300 transition duration-300">Generator</a>
+      <span class="text-purple-400">|</span>
+      <a href="debrief.html" class="font-bold text-lg hover:text-purple-300 transition duration-300">Debrief</a>
+    </div>
+  </nav>
+
+  <main class="bg-white rounded-lg shadow-2xl max-w-2xl w-full p-8 mx-auto">
+    <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">Debrief</h1>
+    
+    <article class="text-gray-700 leading-relaxed">
+      <p class="mb-6">
+        The Rick and Morty API provides a fascinating window into the multiverse of the beloved animated series. Throughout this exercise, we explored how to retrieve character data from an external API and dynamically display it on our webpage. The implementation demonstrates fundamental web development concepts including asynchronous JavaScript operations, DOM manipulation, and modern front-end frameworks like Alpine.js. By fetching random characters and displaying their information—name, species, gender, origin, and image—we created an interactive application that showcases the power of combining client-side logic with RESTful API endpoints. The experience reinforces the importance of error handling, loading states, and responsive design when working with external data sources. This project exemplifies how developers can build engaging user experiences by leveraging publicly available APIs and thoughtful UI/UX design patterns.
+      </p>
+      <p class="mb-6">
+        One of the key takeaways from this exercise is understanding the flow of data from request to display. When a user clicks the "Get Next Character" button, the application generates a random ID between 1 and 826, sends an HTTP request to the API endpoint, waits for the response, parses the JSON data, and finally renders the information in a user-friendly format. This asynchronous workflow is essential in modern web applications where operations may take time to complete. Additionally, the integration of Tailwind CSS demonstrates how utility-first CSS frameworks can rapidly transform the visual presentation of a website without writing extensive custom styles. The combination of Alpine.js for interactivity, Tailwind for styling, and the Rick and Morty API for data creates a seamless, performant application that serves as a solid foundation for more complex projects.
+      </p>
+    </article>
+  </main>
+
+</body>
+</html>
